@@ -1,0 +1,6 @@
+CREATE table task(
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(200),
+  description VARCHAR(255),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+)

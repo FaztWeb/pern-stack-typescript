@@ -1,0 +1,13 @@
+## vscode workspace
+.vscode
+
+## yarn
+.yarn-error.log
+
+### node
+node_modules
+
+## env
+.env
+
+dist
