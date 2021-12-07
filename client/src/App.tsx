@@ -1,5 +1,4 @@
 import "./App.css";
-import { Container } from "semantic-ui-react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -10,13 +9,11 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Container style={{height: '100%'}}>
-        <Switch>
-          <Route path="/" component={TasksList} exact />
-          <Route path="/new-task" component={TaskForm} />
-          <Route path="/edit-task/:id" component={TaskForm} />
-        </Switch>
-      </Container>
+      <Switch>
+        <Route path="/" component={TasksList} exact />
+        <Route path="/new-task" component={TaskForm} />
+        <Route path="/edit-task/:id" component={TaskForm} />
+      </Switch>
     </Router>
   );
 }

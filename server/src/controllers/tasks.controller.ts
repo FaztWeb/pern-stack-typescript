@@ -5,8 +5,8 @@ export const getTasks: Handler = async (req, res) => {
   try {
     const allTasks = await pool.query("SELECT * FROM task");
     return res.json(allTasks.rows);
-  } catch (error) {
-    console.error(error.message);
+  } catch (error: any) {
+    return res.status(400).send(error.message);
   }
 };
 
@@ -18,7 +18,7 @@ export const createTask: Handler = async (req, res) => {
       [title, description]
     );
     res.json(newTask.rows[0]);
-  } catch (error) {
+  } catch (error: any) {
     console.error(error.message);
   }
 };
@@ -28,7 +28,7 @@ export const getTask: Handler = async (req, res) => {
     const { id } = req.params;
     const task = await pool.query("SELECT * FROM task WHERE id = $1", [id]);
     res.json(task.rows[0]);
-  } catch (error) {
+  } catch (error: any) {
     console.error(error.message);
   }
 };
