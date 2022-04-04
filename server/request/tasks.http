@@ -1,15 +1,17 @@
-@api = http://localhost:4000/tasks
+@api = http://localhost:4000/api/tasks
 
 ### get all tasks
 GET {{api}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY0OTA0MTM3OSwiZXhwIjoxNjQ5MTI3Nzc5fQ.yZl_JWWFie8461YWh6ULy1hvT4uICrVHj0zC4dDD28A
 
 ### create task
 POST {{api}}
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY0OTA0MTM3OSwiZXhwIjoxNjQ5MTI3Nzc5fQ.yZl_JWWFie8461YWh6ULy1hvT4uICrVHj0zC4dDD28A
 
 {
-  "title": "some title",
-  "description": "some description"
+  "title": "joe task",
+  "description": "some description joe"
 }
 
 ### get task

@@ -1,0 +1,10 @@
+@api = http://localhost:4000/api/auth
+
+### create a user
+POST {{api}}/signup
+Content-Type: application/json
+
+{
+  "email": "joe@ibm.com",
+  "password": "secret"
+}
